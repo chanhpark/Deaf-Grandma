@@ -12,7 +12,7 @@ while bye < 3
   end
 
     if response == 'BYE'
-      puts ' '
+      puts ' no Dont say that!!'
       bye = bye + 1
     end
     response = gets.chomp
