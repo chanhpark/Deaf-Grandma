@@ -1,20 +1,15 @@
-puts 'hey honey can you tell me a story?'
+puts 'Hey would you tell me a story? '
 response = gets.chomp
-bye = 0
+bye = 1
 
 while bye < 3
   if response != response.upcase
-  puts 'HUH? SPEAK UP SONNY!'
+    puts 'HUH? SPEAK UP Kiddo!!'
+  elsif (response == response.upcase && response != 'BYE')
+    puts 'No, not since ' + (1930+rand(32)).to_s + ' ! '
+  elsif response == 'BYE'
+    puts 'Do not say that word!!'
+    bye = bye + 1
   end
-
-  if  (response == response.upcase && response != 'BYE')
-    puts 'no not since ' + (1930+rand(32)).to_s + ' ! '
-  end
-
-    if response == 'BYE'
-      puts ' no Dont say that!!'
-      bye = bye + 1
-    end
-    response = gets.chomp
-
-  end
+  response = gets.chomp
+end
